@@ -8,13 +8,10 @@ public class DriveAndIntake extends OpMode {
 
     double forward, strafe, rotate;
 
-
     @Override
     public void init() {
         drive.init(hardwareMap);
         intake.init(hardwareMap);
-
-
     }
 
     @Override
