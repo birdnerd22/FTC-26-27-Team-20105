@@ -15,10 +15,10 @@ public class MechanumDrive{
     private IMU imu;
 
     public void init(HardwareMap hwMap){
-        frontLeftMotor = hwMap.get(DcMotor.class, "FLmotor");
-        backLeftMotor = hwMap.get(DcMotor.class, "BLmotor");
-        frontRightMotor = hwMap.get(DcMotor.class, "FRmotor");
-        backRightMotor = hwMap.get(DcMotor.class, "BRmotor");
+        frontLeftMotor = hwMap.get(DcMotor.class, "lf");
+        backLeftMotor = hwMap.get(DcMotor.class, "lb");
+        frontRightMotor = hwMap.get(DcMotor.class, "rf");
+        backRightMotor = hwMap.get(DcMotor.class, "rb");
 
         frontLeftMotor.setDirection(DcMotor.Direction.REVERSE);
         backLeftMotor.setDirection(DcMotor.Direction.REVERSE);

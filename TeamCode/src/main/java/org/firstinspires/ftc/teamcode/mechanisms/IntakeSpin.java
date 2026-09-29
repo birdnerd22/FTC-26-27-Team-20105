@@ -12,7 +12,7 @@ public class IntakeSpin {
     private IMU imu;
 
     public void init(HardwareMap hwMap){
-        intakeMotor = hwMap.get(DcMotor.class, "inMotor");//add intake motor in setup
+        intakeMotor = hwMap.get(DcMotor.class, "intake");//add intake motor in setup
         intakeMotor.setMode(RUN_USING_ENCODER);
         imu = hwMap.get(IMU.class, "imu");
         RevHubOrientationOnRobot RevOrientation = new RevHubOrientationOnRobot(
