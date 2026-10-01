@@ -6,6 +6,8 @@ import com.pedropathing.tuning.autotune.Tuner;
 
 import pedro.procedures.MecanumTuner;
 import pedro.procedures.Tests;
+import pedro.procedures.ThreeWheelTuner;
+
 
 public class Tuning {
     // Tuners go here
@@ -17,5 +19,10 @@ public class Tuning {
     @Tuner
     public static Procedure tests() {
         return new Tests(hardwareMap -> new Mecanum(hardwareMap, Constants.drivetrainConfig), null, null);
+    }
+
+    @Tuner
+    public static Procedure threeWheelTuner() {
+        return new ThreeWheelTuner();
     }
 }
