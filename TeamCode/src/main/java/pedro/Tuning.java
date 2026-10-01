@@ -6,6 +6,7 @@ import com.pedropathing.tuning.autotune.Tuner;
 
 import pedro.procedures.MecanumTuner;
 import pedro.procedures.Tests;
+import pedro.procedures.ThreeWheelIMUTuner;
 import pedro.procedures.ThreeWheelTuner;
 
 
@@ -24,5 +25,10 @@ public class Tuning {
     @Tuner
     public static Procedure threeWheelTuner() {
         return new ThreeWheelTuner();
+    }
+
+    @Tuner
+    public static Procedure threeWheelIMUTuner() {
+        return new ThreeWheelIMUTuner();
     }
 }
