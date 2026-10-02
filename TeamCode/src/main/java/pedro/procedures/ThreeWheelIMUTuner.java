@@ -19,9 +19,9 @@ import java.util.List;
 
 public class ThreeWheelIMUTuner extends Procedure {
 
-    private static String leftEncoderName = "lf";
-    private static String rightEncoderName = "rr";
-    private static String strafeEncoderName = "lr";
+    private static String leftEncoderName = "lb";
+    private static String rightEncoderName = "rf";
+    private static String strafeEncoderName = "rb";
     private static String imuName = "imu";
     private static RevHubOrientationOnRobot.LogoFacingDirection logoDirection =
             RevHubOrientationOnRobot.LogoFacingDirection.UP;
@@ -188,7 +188,7 @@ public class ThreeWheelIMUTuner extends Procedure {
         for (LynxModule hub : map.getAll(LynxModule.class)) {
             hub.setBulkCachingMode(LynxModule.BulkCachingMode.AUTO);
         }
-        for (String name : new String[]{"lf", "lr", "rf", "rr"}) {
+        for (String name : new String[]{"lb", "rb", "rf"}) {
             DcMotorEx motor = map.get(DcMotorEx.class, name);
             motor.setPower(0);
             motor.setDirection(name.equals("lf") || name.equals("lr")

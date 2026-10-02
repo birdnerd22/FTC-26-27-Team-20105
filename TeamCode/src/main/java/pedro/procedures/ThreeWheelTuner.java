@@ -17,9 +17,9 @@ import java.util.List;
 
 public class ThreeWheelTuner extends Procedure {
 
-    private static String leftEncoderName = "lf";
-    private static String rightEncoderName = "rr";
-    private static String strafeEncoderName = "lr";
+    private static String leftEncoderName = "lb";
+    private static String rightEncoderName = "rf";
+    private static String strafeEncoderName = "rb";
 
     public ThreeWheelTuner() {
         super("Three Wheel Tuner", "Tune three odometry pods");
@@ -168,7 +168,7 @@ public class ThreeWheelTuner extends Procedure {
         for (String name : new String[]{"lb", "rb", "rf"}) {
             DcMotorEx motor = map.get(DcMotorEx.class, name);
             motor.setPower(0);
-            motor.setDirection(name.equals("lf") || name.equals("lr")
+            motor.setDirection(name.equals("rb") || name.equals("lb")
                     ? DcMotorSimple.Direction.REVERSE : DcMotorSimple.Direction.FORWARD);
             motor.setZeroPowerBehavior(DcMotor.ZeroPowerBehavior.FLOAT);
         }
